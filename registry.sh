@@ -1,8 +1,8 @@
 ## This is an automated procedure for creating an empty registry to be used for an operator whitening.
 ##create all the necessary directories.
 mkdir /opt/registry
-echo 'Enter the registry FQDN you want to create: '
-read REGISTRY_FQDN
+echo 'Regisrty with the name -- registry -- will be created --> '
+export REGISTRY_FQDN='registry'
 export REGISTRY_BASE="/opt/registry"
 mkdir -p ${REGISTRY_BASE}/{auth,certs,data,downloads}
 mkdir -p ${REGISTRY_BASE}/downloads/{images,tools,secrets}
