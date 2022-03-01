@@ -40,5 +40,5 @@ ENV _CONTAINERS_USERNS_CONFIGURED=""
 RUN wget -O registry.sh https://raw.githubusercontent.com/Tal-Hason/OperatorCeration/master/RegistryCreation/registry_creation_script.sh\?token\=GHSAT0AAAAAABQNV53CXV3JHDTT3HNWFCSGYQ6CUMQ
 
 RUN chmod +x registry.sh
-RUN ./registry.sh
+CMD ./registry.sh
 EXPOSE 5000/tcp
