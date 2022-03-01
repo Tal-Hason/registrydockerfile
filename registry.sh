@@ -4,8 +4,13 @@ mkdir /opt/registry
 echo 'Regisrty with the name -- registry -- will be created --> '
 export REGISTRY_FQDN='registry'
 export REGISTRY_BASE="/opt/registry"
-mkdir -p ${REGISTRY_BASE}/{auth,certs,data,downloads}
-mkdir -p ${REGISTRY_BASE}/downloads/{images,tools,secrets}
+mkdir  ${REGISTRY_BASE}/auth
+mkdir  ${REGISTRY_BASE}/certs
+mkdir  ${REGISTRY_BASE}/data
+mkdir  ${REGISTRY_BASE}/downloads
+mkdir ${REGISTRY_BASE}/downloads/images
+mkdir ${REGISTRY_BASE}/downloads/tools
+mkdir ${REGISTRY_BASE}/downloads/secrets
 echo "Created a bunch of directories"
 ## Add the registry FQDN to /etc/hosts
 echo "127.0.0.1      ${REGISTRY_FQDN}" >> /etc/hosts
