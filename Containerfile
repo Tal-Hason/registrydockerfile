@@ -46,5 +46,5 @@ USER myuser
 RUN wget -O registry.sh https://raw.githubusercontent.com/Tal-Hason/registrydockerfile/main/registry.sh
 
 RUN chmod +x registry.sh
-CMD ./registry.sh
+CMD sudo ./registry.sh
 EXPOSE 5000/tcp
