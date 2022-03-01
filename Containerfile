@@ -37,6 +37,12 @@ RUN mkdir -p /var/lib/shared/overlay-images /var/lib/shared/overlay-layers /var/
 
 ENV _CONTAINERS_USERNS_CONFIGURED=""
 
+RUN groupadd -r myuser && useradd -r -g myuser myuser
+
+# "HERE DO WHAT YOU HAVE TO DO AS A ROOT USER LIKE INSTALLING PACKAGES ETC."
+
+USER myuser
+
 RUN wget -O registry.sh https://raw.githubusercontent.com/Tal-Hason/registrydockerfile/main/registry.sh
 
 RUN chmod +x registry.sh
